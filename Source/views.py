@@ -44,7 +44,7 @@ def index(request):
         velocidade = soup.find_all("span")[9].get_text()
         pressao = soup.find_all("span")[11].get_text()
         umidade = soup.find_all("span")[13].get_text()
-        update.message.text = "" + titulo +"\n"+ nome+"\nTemperatura: "+temperatura+"\nSesação: "+sensacao+"\nVelocidade do Vento: "+velocidade +"\nPressão: "+pressao +"\nUmidade: "+umidade
+        update.message.text = "" + titulo +"\n"+ nome+"\nTemperatura: "+temperatura+"\nSensação: "+sensacao+"\nVelocidade do Vento: "+velocidade +"\nPressão: "+pressao +"\nUmidade: "+umidade
 
         #Tratamento de erro - ARRUMAR
         if umidade == '%':
